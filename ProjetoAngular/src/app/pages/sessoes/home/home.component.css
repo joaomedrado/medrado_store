@@ -1,0 +1,1907 @@
+
+
+.sessaoVideo {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.sessaoVideo .video {
+    width: 98.9vw;
+    height: auto;
+}
+
+.tituloSessaoVideo {
+    position: absolute;
+    top: 40%;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    z-index: 2; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    width: 100%;
+    padding: 0 20px;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5em;
+   
+}
+.textoChamativos{
+    color: #cdaf02;
+    font-weight: bold;
+}
+.sessaoVideo button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 300%); 
+    z-index: 2; 
+    padding: 15px;
+    width: 10%;
+}
+.sessaoVideo::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    pointer-events: none;
+}
+
+.sessaoBoxOneHome{
+    margin-top: -10px;
+}
+.sessaoOnda{
+    position: relative;
+    background-color: black;
+    height: 180px;
+}
+.sessaoOnda:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width:1270px;
+    height: 200px;
+    background-color: black;
+    border: none;
+}
+.sessaoOnda::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 200px;
+    background-color: black;
+    border-top-left-radius: 150px;
+    border: none;
+    border: none;
+    
+}
+.sessaoSubOnda{
+    position: relative;
+    height: 150px;
+    background-color: white;
+    
+}
+.sessaoSubOnda::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 200px;
+    height: 600px;
+    background-color: white;
+    border-top-left-radius: 150px;
+    border: none;
+
+}
+.sessaoSubOnda::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border: none;
+    
+}
+
+
+.sessaoBoxOneHome .formlarioBody{
+    position: relative;
+    top: 0px;
+    height: 950px;
+    background-color: white;
+}
+.subBoxOneHome{
+    display: flex;
+    justify-content: space-around;
+}
+.subBoxOneHome .flexSubBoxOneHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 30px;
+}
+.flexSubBoxOneHome h1{
+    font-size: 4rem;
+    color: black;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+   
+}
+
+.flexSubBoxOneHome h5{
+    width: 90%;
+}
+.flexSubBoxOneHome a{
+    width: 20%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.flexImagemSessaoOneHome img{
+    height: 120vh;
+}
+.boxSessaoManualHome{
+    display: flex;
+    justify-content: space-around;
+
+}
+.boxSessaoManualHome .flexSessaoManualHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+
+
+
+
+.boxSessaoSobreHome{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    width: 100%;
+
+}
+.boxSessaoSobreHome .flexSessaoSobreHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    
+}
+.flexSessaoSobreHome h1{
+    font-size: 4rem;
+    color: white;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    width: 15%;
+}
+.flexSessaoSobreHome h5{
+    width: 90%;
+    color: white;
+}
+.flexSessaoSobreHome a{
+    width: 25%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.boxSessaoSobreHome .flexImagemSessaoSobreHome{
+    display: flex;
+}
+.flexImagemSessaoSobreHome img{
+    z-index: 1 ;
+    height: 120vh;
+    position: relative;
+   
+}
+
+
+
+.sessaoOnda2{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 900px;
+}
+
+
+.sessaoSubOnda2{
+    position: relative;
+    height: 150px;
+    background-color: white;
+    
+}
+.sessaoSubOnda2::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 400px;
+    background-color: white;
+    border-top-right-radius: 150px;
+    border: none;
+
+}
+.sessaoSubOnda2::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border: none;
+    
+}
+
+.coresDiferentesSessaoSobre{
+    color: white;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 1130px){
+    
+
+.sessaoVideo {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.sessaoVideo .video {
+    width: 98.9vw;
+    height: auto;
+}
+
+.tituloSessaoVideo {
+    position: absolute;
+    top: 40%;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    z-index: 2; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    width: 100%;
+    padding: 0 20px;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5em;
+   
+}
+.textoChamativos{
+    color: #cdaf02;
+    font-weight: bold;
+}
+.sessaoVideo button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 300%); 
+    z-index: 2; 
+    padding: 15px;
+    width: auto;
+}
+.sessaoVideo::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    pointer-events: none;
+}
+
+.sessaoBoxOneHome{
+    margin-top: -10px;
+}
+.sessaoOnda{
+    position: relative;
+    background-color: black;
+    height: 180px;
+}
+.sessaoOnda:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: 200px;
+    background-color: black;
+}
+.sessaoOnda::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 200px;
+    background-color: black;
+    border-top-left-radius: 150px;
+    border: none;
+    
+}
+.sessaoSubOnda{
+    position: relative;
+    height: 150px;
+    background-color: white;
+    
+}
+.sessaoSubOnda::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 200px;
+    height: 600px;
+    background-color: white;
+    border-top-left-radius: 150px;
+    border: none;
+
+}
+.sessaoSubOnda::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border: none;
+    
+}
+
+
+.sessaoBoxOneHome .formlarioBody{
+    position: relative;
+    top: 0px;
+    height: 950px;
+    background-color: white;
+}
+.subBoxOneHome{
+    display: flex;
+    justify-content: space-around;
+}
+.subBoxOneHome .flexSubBoxOneHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 30px;
+}
+.flexSubBoxOneHome h1{
+    font-size: 4rem;
+    color: black;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+   
+}
+
+.flexSubBoxOneHome h5{
+    width: 90%;
+}
+.flexSubBoxOneHome a{
+    width: 20vw;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.flexImagemSessaoOneHome img{
+    height: 90vh;
+}
+.boxSessaoManualHome{
+    display: flex;
+    justify-content: space-around;
+
+}
+.boxSessaoManualHome .flexSessaoManualHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+
+
+
+
+.boxSessaoSobreHome{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    width: 100%;
+
+}
+.boxSessaoSobreHome .flexSessaoSobreHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    
+}
+.flexSessaoSobreHome h1{
+    font-size: 4rem;
+    color: white;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    width: 15%;
+}
+.flexSessaoSobreHome h5{
+    width: 90%;
+    color: white;
+}
+.flexSessaoSobreHome a{
+    width: 20vw;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.boxSessaoSobreHome .flexImagemSessaoSobreHome{
+    display: flex;
+}
+.flexImagemSessaoSobreHome img{
+    z-index: 1 ;
+    height: 90vh;
+    position: relative;
+   
+}
+
+
+
+.sessaoOnda2{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 900px;
+}
+
+
+.sessaoSubOnda2{
+    position: relative;
+    height: 150px;
+    background-color: white;
+    
+}
+.sessaoSubOnda2::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-top-right-radius: 150px;
+    border: none;
+
+}
+.sessaoSubOnda2::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border: none;
+    
+}
+
+.coresDiferentesSessaoSobre{
+    color: white;
+    font-weight: bold;
+}
+
+
+}
+
+
+
+@media (max-width: 900px){
+    
+
+    .sessaoVideo {
+        height: auto;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .sessaoVideo .video {
+        width: 99.9vw;
+        height: auto;
+    }
+    
+    .tituloSessaoVideo {
+        position: absolute;
+        top: 40%;
+        color: white;
+        font-size: 4rem;
+        text-align: center;
+        z-index: 2; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-weight: 500;
+        width: 100%;
+        padding: 0 20px;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5em;
+       
+    }
+    .textoChamativos{
+        color: #cdaf02;
+        font-weight: bold;
+    }
+    .sessaoVideo button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 300%); 
+        z-index: 2; 
+        padding: 15px;
+        width: auto;
+    }
+    .sessaoVideo::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+        pointer-events: none;
+    }
+    
+    .sessaoBoxOneHome{
+        margin-top: -10px;
+    }
+    .sessaoOnda{
+        position: relative;
+        background-color: black;
+        height: 180px;
+    }
+    .sessaoOnda:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        height: 200px;
+        background-color: black;
+    }
+    .sessaoOnda::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150px;
+        height: 200px;
+        background-color: black;
+        border-top-left-radius: 150px;
+        border: none;
+        
+    }
+    .sessaoSubOnda{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda::after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 600px;
+        background-color: white;
+        border-top-left-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+        
+    }
+    
+    
+    .sessaoBoxOneHome .formlarioBody{
+        position: relative;
+        top: 0px;
+        height: auto;
+        background-color: white;
+    }
+    .subBoxOneHome{
+        display: flex;
+        justify-content: space-around;
+    }
+    .subBoxOneHome .flexSubBoxOneHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        margin-left: 30px;
+    }
+    .flexSubBoxOneHome h1{
+        font-size: 4rem;
+        color: black;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+       
+    }
+    
+    .flexSubBoxOneHome h5{
+        width: 90%;
+    }
+    .flexSubBoxOneHome a{
+        width: 20vw;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .flexImagemSessaoOneHome img{
+        height: 55vh;
+    }
+    .boxSessaoManualHome{
+        display: flex;
+        justify-content: space-around;
+    
+    }
+    .boxSessaoManualHome .flexSessaoManualHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        margin-left: 40px;
+    }
+    
+    
+    
+    
+    
+    .boxSessaoSobreHome{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        width: 100%;
+    
+    }
+    .boxSessaoSobreHome .flexSessaoSobreHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        
+    }
+    .flexSessaoSobreHome h1{
+        font-size: 4rem;
+        color: white;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        width: 15%;
+    }
+    .flexSessaoSobreHome h5{
+        width: 90%;
+        color: white;
+    }
+    .flexSessaoSobreHome a{
+        width: 20vw;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .boxSessaoSobreHome .flexImagemSessaoSobreHome{
+        display: flex;
+    }
+    .flexImagemSessaoSobreHome img{
+        z-index: 1 ;
+        height: 55vh;
+        position: relative;
+       
+    }
+    
+    
+    
+    .sessaoOnda2{
+        position: relative;
+        background-color: black;
+        width: 100%;
+        height: auto;
+    }
+    
+    
+    .sessaoSubOnda2{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda2::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-top-right-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda2::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+        
+    }
+    
+    .coresDiferentesSessaoSobre{
+        color: white;
+        font-weight: bold;
+    }
+    
+    
+    }
+    
+    
+    
+
+
+
+@media (max-width: 800px){
+    
+
+    .sessaoVideo {
+        height: auto;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .sessaoVideo .video {
+        width: 98.9vw;
+        height: auto;
+    }
+    
+    .tituloSessaoVideo {
+        position: absolute;
+        top: 40%;
+        color: white;
+        font-size: 3.2rem;
+        text-align: center;
+        z-index: 2; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-weight: 500;
+        width: 100%;
+        padding: 0 20px;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5em;
+       
+    }
+    .textoChamativos{
+        color: #cdaf02;
+        font-weight: bold;
+    }
+    .sessaoVideo button{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, 300%); 
+        z-index: 2; 
+        padding: 15px;
+        width: auto;
+    }
+    .sessaoVideo::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+        pointer-events: none;
+    }
+    
+    
+    .sessaoOnda{
+        position: relative;
+        background-color: black;
+        height: 180px;
+    }
+    .sessaoOnda:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 200px;
+        background-color: black;
+        border: none;
+    }
+    .sessaoOnda::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150px;
+        height: 200px;
+        background-color: black;
+        border-top-left-radius: 150px;
+        border: none;
+        
+    }
+    .sessaoSubOnda{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda::after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 400px;
+        background-color: white;
+        border-top-left-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+        
+    }
+    
+    
+    .sessaoBoxOneHome .formlarioBody{
+        position: relative;
+        top: 0px;
+        height: auto;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    .subBoxOneHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+
+   
+    }
+    .subBoxOneHome .flexSubBoxOneHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+        width: 100%;
+        height: auto;
+        margin-right: 40px;
+       
+    }
+    .flexSubBoxOneHome h1{
+        font-size: 4rem;
+        color: black;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+       
+    }
+    
+    .flexSubBoxOneHome h5{
+        text-align: center;
+    }
+    .flexSubBoxOneHome a{
+        width: 40%;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .flexImagemSessaoOneHome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flexImagemSessaoOneHome img{
+        height: 70vh;
+    }
+   
+    .boxSessaoSobreHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    
+    }
+    .boxSessaoSobreHome .flexSessaoSobreHome{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2vh;
+        width: 100%;
+        padding-top: 5vh;
+        
+    }
+    .flexSessaoSobreHome h1{
+        font-size: 4rem;
+        color: white;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        width: auto;
+    }
+    .flexSessaoSobreHome h5{
+        text-align: center;
+        color: white;
+    }
+    .flexSessaoSobreHome a{
+        width: 40%;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .boxSessaoSobreHome .flexImagemSessaoSobreHome{
+        display: flex;
+    }
+    .flexImagemSessaoSobreHome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flexImagemSessaoSobreHome img{
+        z-index: 1 ;
+        height: 70vh;
+        position: relative;
+       
+    }
+    
+    
+    
+    .sessaoOnda2{
+        position: relative;
+        background-color: black;
+        width: 100%;
+        height: auto;
+    }
+    
+    
+    .sessaoSubOnda2{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda2::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-top-right-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda2::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+        
+    }
+    
+    .coresDiferentesSessaoSobre{
+        color: white;
+        font-weight: bold;
+    }
+    
+    
+    }
+    
+    
+@media (max-width: 700px){
+    
+
+    .sessaoVideo {
+        height: 70vh;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .sessaoVideo .video {
+        width: 98.9vw;
+        height: auto;
+    }
+    
+    .tituloSessaoVideo {
+        position: absolute;
+        top: 40%;
+        color: white;
+        font-size: 3.2rem;
+        text-align: center;
+        z-index: 2; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-weight: 500;
+        width: 100%;
+        padding: 0 20px;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5em;
+       
+    }
+    .textoChamativos{
+        color: #cdaf02;
+        font-weight: bold;
+    }
+    .sessaoVideo button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 300%); 
+        z-index: 2; 
+        padding: 15px;
+        width: auto;
+    }
+    .sessaoVideo::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        pointer-events: none;
+    }
+    
+    
+    .sessaoOnda{
+        position: relative;
+        background-color: black;
+        height: 180px;
+    }
+    .sessaoOnda:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 200px;
+        background-color: black;
+        border: none;
+    }
+    .sessaoOnda::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150px;
+        height: 200px;
+        background-color: black;
+        border-top-left-radius: 150px;
+        border: none;
+        
+    }
+    .sessaoSubOnda{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda::after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 400px;
+        background-color: white;
+        border-top-left-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+    }
+    
+    
+    .sessaoBoxOneHome .formlarioBody{
+        position: relative;
+        top: 0px;
+        height: auto;
+        background-color: white;
+    }
+    .subBoxOneHome{
+        display: flex;
+        flex-direction: column;
+
+   
+    }
+    .subBoxOneHome .flexSubBoxOneHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        margin-left: 30px;
+    }
+    .flexSubBoxOneHome h1{
+        font-size: 4rem;
+        color: black;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+       
+    }
+    
+   
+    .flexImagemSessaoOneHome{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flexImagemSessaoOneHome img{
+        height: 80vh;
+    }
+    .flexSessaoSobreHome a{
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .boxSessaoSobreHome .flexImagemSessaoSobreHome{
+        display: flex;
+    }
+    .flexImagemSessaoSobreHome{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flexImagemSessaoSobreHome img{
+        z-index: 1 ;
+        height: 80vh;
+        position: relative;
+       
+    }
+    
+    
+    
+    .sessaoOnda2{
+        position: relative;
+        background-color: black;
+        width: 100%;
+        height: auto;
+    }
+    
+    
+    .sessaoSubOnda2{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda2::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-top-right-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda2::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+        
+    }
+    
+    .coresDiferentesSessaoSobre{
+        color: white;
+        font-weight: bold;
+    }
+    
+    
+    }
+    
+
+       
+@media (max-width: 520px){
+    
+
+    .sessaoVideo {
+        height: 70vh;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .sessaoVideo .video {
+        width: 98.9vw;
+        height: auto;
+    }
+    
+    .tituloSessaoVideo {
+        position: absolute;
+        top: 40%;
+        color: white;
+        font-size: 3.2rem;
+        text-align: center;
+        z-index: 2; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-weight: 500;
+        width: 100%;
+        padding: 0 20px;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5em;
+       
+    }
+    .textoChamativos{
+        color: #cdaf02;
+        font-weight: bold;
+    }
+    .sessaoVideo button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 300%); 
+        z-index: 2; 
+        padding: 15px;
+        width: auto;
+    }
+    .sessaoVideo::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        pointer-events: none;
+    }
+    
+    
+    .sessaoOnda{
+        position: relative;
+        background-color: black;
+        height: 180px;
+    }
+    .sessaoOnda:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 200px;
+        background-color: black;
+        border: none;
+    }
+    .sessaoOnda::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150px;
+        height: 200px;
+        background-color: black;
+        border-top-left-radius: 150px;
+        border: none;
+        
+    }
+    .sessaoSubOnda{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda::after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 400px;
+        background-color: white;
+        border-top-left-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+        
+    }
+    
+    
+    .sessaoBoxOneHome .formlarioBody{
+        position: relative;
+        top: 0px;
+        height: auto;
+        background-color: white;
+    }
+    .subBoxOneHome{
+        display: flex;
+        flex-direction: column;
+
+   
+    }
+    .subBoxOneHome .flexSubBoxOneHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        margin-left: 30px;
+    }
+    .flexSubBoxOneHome h1{
+        font-size: 4rem;
+        color: black;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+       
+    }
+    
+    .flexSubBoxOneHome h5{
+        width: 90%;
+    }
+   
+    .flexImagemSessaoOneHome{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flexImagemSessaoOneHome img{
+        height: 50vh;
+    }
+    .flexSessaoSobreHome a{
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .boxSessaoSobreHome .flexImagemSessaoSobreHome{
+        display: flex;
+    }
+    .flexImagemSessaoSobreHome{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flexImagemSessaoSobreHome img{
+        z-index: 1 ;
+        height: 50vh;
+        position: relative;
+       
+    }
+    
+    
+    
+    .sessaoOnda2{
+        position: relative;
+        background-color: black;
+        width: 100%;
+        height: auto;
+    }
+    
+    
+    .sessaoSubOnda2{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda2::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-top-right-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda2::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+        
+    }
+    
+    .coresDiferentesSessaoSobre{
+        color: white;
+        font-weight: bold;
+    }
+    
+    
+    }
+    
+        
+
+       
+@media (max-width: 480px){
+    
+
+    .sessaoVideo {
+        height: 80vh;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .sessaoVideo .video {
+        width: 98.9vw;
+        height: auto;
+    }
+    
+    .tituloSessaoVideo {
+        position: absolute;
+        top: 40%;
+        color: white;
+        font-size: 2.5rem;
+        text-align: center;
+        z-index: 2; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-weight: 500;
+        width: 100%;
+        padding: 0 20px;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5em;
+       
+    }
+    .textoChamativos{
+        color: #cdaf02;
+        font-weight: bold;
+    }
+    .sessaoVideo button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 300%); 
+        z-index: 2; 
+        padding: 15px;
+        width: auto;
+    }
+    .sessaoVideo::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        pointer-events: none;
+    }
+    
+    
+    .sessaoOnda{
+        position: relative;
+        background-color: black;
+        height: 180px;
+    }
+    .sessaoOnda:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 200px;
+        background-color: black;
+        border: none;
+    }
+    .sessaoOnda::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150px;
+        height: 200px;
+        background-color: black;
+        border-top-left-radius: 150px;
+        border: none;
+        
+    }
+    .sessaoSubOnda{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda::after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 400px;
+        background-color: white;
+        border-top-left-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        border: none;
+        background-color: black;
+        
+    }
+    
+    
+    .sessaoBoxOneHome .formlarioBody{
+        position: relative;
+        top: 0px;
+        height: auto;
+        background-color: white;
+    }
+    .subBoxOneHome{
+        display: flex;
+        flex-direction: column;
+
+   
+    }
+    .subBoxOneHome .flexSubBoxOneHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        margin-left: 30px;
+    }
+    .flexSubBoxOneHome h1{
+        font-size: 4rem;
+        color: black;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+       
+    }
+    
+    .flexSubBoxOneHome h5{
+        width: 90%;
+    }
+   
+    .flexImagemSessaoOneHome{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flexImagemSessaoOneHome img{
+        height: 50vh;
+    }
+    
+    
+  
+    .boxSessaoSobreHome .flexImagemSessaoSobreHome{
+        display: flex;
+    }
+    .flexImagemSessaoSobreHome{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flexImagemSessaoSobreHome img{
+        z-index: 1 ;
+        height: 50vh;
+        position: relative;
+       
+    }
+    
+    
+    
+    .sessaoOnda2{
+        position: relative;
+        background-color: black;
+        width: 100%;
+        height: auto;
+    }
+    
+    
+    .sessaoSubOnda2{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda2::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-top-right-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda2::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+        
+    }
+    
+    .coresDiferentesSessaoSobre{
+        color: white;
+        font-weight: bold;
+    }
+    
+    
+    }
+    
+
+    
+       
+@media (max-width: 380px){
+    
+
+    .sessaoVideo {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .sessaoVideo .video {
+        width: 98.9vw;
+        height: auto;
+    }
+    
+    .tituloSessaoVideo {
+        position: absolute;
+        top: 40%;
+        color: white;
+        font-size: 2.5rem;
+        text-align: center;
+        z-index: 2; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-weight: 500;
+        width: 100%;
+        padding: 0 20px;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5em;
+       
+    }
+    .textoChamativos{
+        color: #cdaf02;
+        font-weight: bold;
+    }
+    .sessaoVideo button{
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, 300%); 
+        z-index: 2; 
+        padding: 15px;
+        width: auto;
+    }
+    .sessaoVideo::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        pointer-events: none;
+    }
+    
+    
+    .sessaoOnda{
+        position: relative;
+        background-color: black;
+        height: 180px;
+    }
+    .sessaoOnda:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 200px;
+        background-color: black;
+        border: none;
+    }
+    .sessaoOnda::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150px;
+        height: 200px;
+        background-color: black;
+        border-top-left-radius: 150px;
+        border: none;
+        
+    }
+    .sessaoSubOnda{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda::after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 400px;
+        background-color: white;
+        border-top-left-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+        
+    }
+    
+
+    
+    .flexSubBoxOneHome a{
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .flexImagemSessaoOneHome{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flexImagemSessaoOneHome img{
+        height: 50vh;
+    }
+    
+    
+    .flexSessaoSobreHome h5{
+        color: white;
+    }
+    .flexSessaoSobreHome a{
+        
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .boxSessaoSobreHome .flexImagemSessaoSobreHome{
+        display: flex;
+    }
+    .flexImagemSessaoSobreHome{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .flexImagemSessaoSobreHome img{
+        z-index: 1 ;
+        height: 50vh;
+        position: relative;
+       
+    }
+    
+    
+    
+    .sessaoOnda2{
+        position: relative;
+        background-color: black;
+        width: 100%;
+        height: auto;
+    }
+    
+    
+    .sessaoSubOnda2{
+        position: relative;
+        height: 150px;
+        background-color: white;
+        
+    }
+    .sessaoSubOnda2::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-top-right-radius: 150px;
+        border: none;
+    
+    }
+    .sessaoSubOnda2::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: none;
+        
+    }
+    
+    .coresDiferentesSessaoSobre{
+        color: white;
+        font-weight: bold;
+    }
+    
+    
+    }
+    
+
+    

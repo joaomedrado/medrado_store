@@ -1,0 +1,99 @@
+<section *ngIf="formularioAtualizar;else formulario" class="meuPerfilPai">
+    <section class="meuPerfil">
+        <article class="flexBoxOneMeuPerfil">
+            <div class="flexImagemPerfil">
+              <img [src]="infoUsuario?.pessoa?.imagemPessoa?.imagem" alt="">
+            </div>
+            <h1>{{ infoUsuario?.pessoa?.dadosPessoais?.nome }}</h1>
+        </article>
+        <article class="flexBoxTwoMeuPerfil">
+            <section class="flexSubBoTwoMeuPerfil">
+                <div class="flexTextoSubBoxTwoMeuPerfil">
+                    <h2>Dados Pessoais</h2>
+                    <div class="flexBotaoVisualizarInformacao">
+                        <button type="button" class="btn btn-warning" (click)="metodoFormularioAtualizar()" >
+                            <img src="../../../assets/img/editar.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="flexDadosSubBoxTwoMeuPerfil">
+                    <h5> {{ infoUsuario?.pessoa?.dadosPessoais?.nome }}  </h5>
+                    <h5> {{ infoUsuario?.pessoa?.dadosPessoais?.sobrenome }} </h5>
+                    <h5> {{ infoUsuario?.pessoa?.dadosPessoais?.telefone }} </h5>
+                    <h5> {{ infoUsuario?.pessoa?.dadosPessoais?.cpf }} </h5>
+                    <h5> {{ infoUsuario?.pessoa?.dadosPessoais?.email }} </h5>
+                    <h5> {{ infoUsuario?.pessoa?.dadosPessoais?.senha }} </h5>
+                </div>
+            </section>
+            <section  class="flexSubBoTwoMeuPerfil">
+                <div class="flexTextoSubBoxTwoMeuPerfil">
+                    <h2>Endereco</h2>
+                </div>
+                <div class="flexDadosSubBoxTwoMeuPerfil">
+                    <h5> {{ infoUsuario?.pessoa?.endereco?.logradouro }} </h5>
+                    <h5> {{ infoUsuario?.pessoa?.endereco?.numero }} </h5>
+                    <h5> {{ infoUsuario?.pessoa?.endereco?.bairro }} </h5>
+                    <h5> {{ infoUsuario?.pessoa?.endereco?.cidade }} </h5>
+                    <h5> {{ infoUsuario?.pessoa?.endereco?.estado }} </h5>
+                    <h5> {{ infoUsuario?.pessoa?.endereco?.pais }} </h5>
+                    <h5> {{ infoUsuario?.pessoa?.endereco?.cep }} </h5>
+                </div>
+            </section>
+        </article>
+        
+    </section>
+ 
+</section>
+
+<ng-template #formulario>
+    <section class="meuPerfil">
+        <article class="flexBoxOneMeuPerfil">
+            <div class="flexImagemPerfil" (mouseover)="imagemHover = true" (mouseleave)="imagemHover = false">
+                <img [src]="infoUsuario.pessoa.imagemPessoa.imagem" alt="">
+                <input type="file" accept="image/*" (change)="metodoSelecionarImagem($event)" *ngIf="imagemHover"  />
+                
+            </div>
+            <h1>{{ infoUsuario.pessoa.dadosPessoais.nome }}</h1>
+        </article>
+      
+        <article class="flexBoxTwoMeuPerfil">
+          <section class="flexSubBoTwoMeuPerfil">
+            <div class="flexTextoSubBoxTwoMeuPerfil">
+              <h2>Dados Pessoais</h2>
+            </div>
+            <div class="flexDadosSubBoxTwoMeuPerfil">
+              <input [(ngModel)]="infoUsuario.pessoa.dadosPessoais.nome" type="text" placeholder="Nome">
+              <input [(ngModel)]="infoUsuario.pessoa.dadosPessoais.sobrenome" type="text" placeholder="Sobrenome">
+              <input [(ngModel)]="infoUsuario.pessoa.dadosPessoais.telefone" type="text" placeholder="Número Telefone">
+              <input [(ngModel)]="infoUsuario.pessoa.dadosPessoais.cpf" type="text" disabled>
+              <input [(ngModel)]="infoUsuario.pessoa.dadosPessoais.email" type="email" placeholder="E-mail" >
+              <div class="inputGroup">
+                  <input [(ngModel)]="infoUsuario.pessoa.dadosPessoais.senha" [type]="senhaVisivel ? 'password' : 'text' " placeholder="Senha">
+                  <span class="input-group-text" (click)="metodoSenhaVisivel()">
+                    <i [class]="senhaVisivel ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+                  </span>
+              </div>
+            </div>
+          </section>
+      
+          <section class="flexSubBoTwoMeuPerfil">
+            <div class="flexTextoSubBoxTwoMeuPerfil">
+              <h2>Endereço</h2>
+            </div>
+            <div class="flexDadosSubBoxTwoMeuPerfil">
+              <input [(ngModel)]="infoUsuario.pessoa.endereco.logradouro" type="text" placeholder="Logradouro">
+              <input [(ngModel)]="infoUsuario.pessoa.endereco.numero" type="text" placeholder="Número">
+              <input [(ngModel)]="infoUsuario.pessoa.endereco.bairro" type="text" placeholder="Bairro">
+              <input [(ngModel)]="infoUsuario.pessoa.endereco.cidade" type="text" placeholder="Cidade">
+              <input [(ngModel)]="infoUsuario.pessoa.endereco.estado" type="text" placeholder="Estado">
+              <input [(ngModel)]="infoUsuario.pessoa.endereco.pais" type="text" placeholder="País">
+              <input [(ngModel)]="infoUsuario.pessoa.endereco.cep" type="text" placeholder="CEP">
+            </div>
+          </section>
+        </article>
+        <div class="flexBotoesAtulizarInformacoes">
+            <button type="button" class="btn btn-success" (click)="metodoAtulizarDadosPerfil()">Salvar Alterações</button>
+            <button type="button" class="btn btn-danger" (click)="metodoFormularioAtualizar()" >Cancelar</button>
+        </div>
+      </section>      
+</ng-template>

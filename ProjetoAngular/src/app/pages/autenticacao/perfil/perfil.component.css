@@ -1,0 +1,237 @@
+
+.meuPerfilPai{
+  padding-top: 10vh;
+}
+.meuPerfil {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+  padding: 5%;
+}
+
+.flexBoxOneMeuPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.flexBoxOneMeuPerfil .flexImagemPerfil {
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
+  background-color: rgb(125, 121, 121);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexBoxOneMeuPerfil img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.flexBoxTwoMeuPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15vh;
+}
+
+.flexBoxTwoMeuPerfil section {
+  width: 50vw;
+  height: auto;
+}
+
+.flexSubBoTwoMeuPerfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2vh;
+}
+
+.flexTextoSubBoxTwoMeuPerfil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexSubBoTwoMeuPerfil input {
+  padding: 3%;
+  border-radius: 2%;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.413);
+  border: none;
+}
+
+.flexBoxTwoMeuPerfil section h5 {
+  padding: 3%;
+  border-radius: 2%;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.413);
+}
+
+.flexDadosSubBoxTwoMeuPerfil {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.input-group-text {
+  cursor: pointer;
+}
+
+i {
+  font-size: 1.2em;
+}
+
+.inputGroup {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.inputGroup input {
+  width: 100%;
+}
+
+.flexBotaoVisualizarInformacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexBotaoVisualizarInformacao button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexBotaoVisualizarInformacao button img {
+  height: 4vh;
+}
+
+button.btn-warning {
+  position: relative;
+}
+
+button.btn-warning:hover::after {
+  content: 'EDITAR';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+button.btn-warning:hover::after {
+  opacity: 1;
+}
+
+.flexBotoesAtulizarInformacoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.flexBotoesAtulizarInformacoes button {
+  width: 15vw;
+  padding: 2vh;
+  font-size: 1.2rem;
+}
+
+/* Responsividade para telas médias (tablets) */
+@media (max-width: 1024px) {
+  .flexBoxOneMeuPerfil {
+      flex-direction: column;
+      gap: 5vh;
+  }
+
+  .flexBoxOneMeuPerfil .flexImagemPerfil {
+      height: 15vh;
+      width: 15vh;
+  }
+
+  .flexBoxTwoMeuPerfil section {
+      width: 70vw;
+  }
+
+  .flexBotoesAtulizarInformacoes button {
+      width: 20vw;
+  }
+
+  .flexSubBoTwoMeuPerfil input, .flexBoxTwoMeuPerfil section h5 {
+      padding: 2%;
+  }
+}
+
+/* Responsividade para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+  .meuPerfil {
+      gap: 10vh;
+      padding: 3%;
+  }
+
+  .flexBoxOneMeuPerfil {
+      flex-direction: column;
+      gap: 3vh;
+  }
+
+  .flexBoxOneMeuPerfil .flexImagemPerfil {
+      height: 12vh;
+      width: 12vh;
+  }
+
+  .flexBoxTwoMeuPerfil section {
+      width: 90vw;
+  }
+
+  .flexBotoesAtulizarInformacoes button {
+      width: 40vw;
+      padding: 1.5vh;
+  }
+
+  .flexBotaoVisualizarInformacao button img {
+      height: 3vh;
+  }
+
+  .flexSubBoTwoMeuPerfil input, .flexBoxTwoMeuPerfil section h5 {
+      padding: 1.5%;
+  }
+}
+
+/* Responsividade para telas muito pequenas (320px de largura) */
+@media (max-width: 480px) {
+  .flexBoxOneMeuPerfil .flexImagemPerfil {
+      height: 10vh;
+      width: 10vh;
+  }
+
+  .flexBoxTwoMeuPerfil section {
+      width: 100%;
+  }
+
+  .flexBotoesAtulizarInformacoes button {
+      width: 80vw;
+      padding: 1.5vh;
+  }
+
+  .flexBotaoVisualizarInformacao button img {
+      height: 2.5vh;
+  }
+
+  .flexSubBoTwoMeuPerfil input, .flexBoxTwoMeuPerfil section h5 {
+      padding: 1%;
+  }
+}

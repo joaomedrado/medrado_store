@@ -1,0 +1,431 @@
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+section {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding:  7% 7% 7%;
+    padding-top: 10dvh;
+}
+
+.flexSessaoDetalhes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vw;
+    padding-top: 5%;
+}
+
+.carousel-item {
+    transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    position: relative;
+}
+
+.carrosselSlide {
+    height: 80vh;
+}
+
+.boxOneDetalhes {
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel {
+    height: 88vh;
+    width: auto;
+}
+
+.flexBotoesCarrossel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.3vw;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0;
+    top: 82vh;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+    border: none;
+    margin: 0 5px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+    background-color: black;
+}
+
+.carousel-indicators button:hover {
+    opacity: 0.8;
+}
+
+.boxTwoDetalhes {
+    width: 50%;
+}
+
+.boxTwoDetalhes h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.flexSubBoxtwoDetalhes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.priceBox .preco {
+    font-size: 2rem;
+    color: rgb(53, 52, 52);
+    font-weight: 500;
+}
+
+.parcelas {
+    color: #bfa201;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.flexInputQuantidade {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.flexInputQuantidade label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.flexInputQuantidade input {
+    width: 60px;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.flexBotaoDetalhes {
+    display: flex;
+    gap: 10px;
+}
+
+.flexBotaoDetalhes button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.flexBotaoDetalhes button:first-child {
+    background-color: black;
+    color: white;
+}
+
+.flexBotaoDetalhes .btnDescricao {
+    background-color: #ffdb15;
+    color: #333;
+}
+
+.flexBotaoDetalhes button:hover {
+    opacity: 0.9;
+}
+
+.tabelaDetalhes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabelaDetalhes th,
+.tabelaDetalhes td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabelaDetalhes th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.tabelaDetalhes tr:hover {
+    background-color: #f1f1f1;
+}
+
+.alertCarrinho {
+    display: flex;
+    justify-content: space-between;
+    width: 98.9vw;
+}
+
+.flexPrecos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.precoOriginal {
+    color: rgb(93, 89, 89);
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.product-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding-bottom: 2vh;
+}
+
+.color-selector {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+
+.color-selector button {
+    width: auto;
+    padding: 8px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    font-weight: 400;
+    background-color: white;
+}
+
+.color-selector button.selected {
+    border: 2px solid black;
+    background-color: #ffdb15;
+}
+
+.tamanho-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vh;
+}
+.tamanho-selector button {
+    width: auto;
+    padding: 8px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    font-weight: 400;
+    background-color: white;
+}
+
+.tamanho-selector button.selected {
+    border: 2px solid black;
+    background-color: #ffdb15;
+}
+
+@media (max-width: 1024px) {
+    .flexSessaoDetalhes {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .boxOneDetalhes,
+    .boxTwoDetalhes {
+        width: 100%;
+    }
+
+    .carrosselSlide {
+        height: 60vh;
+    }
+
+    .carousel-indicators {
+        top: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .flexSessaoDetalhes {
+        padding: 0;
+    }
+
+    .carousel {
+        height: 50vh;
+    }
+
+    .carrosselSlide {
+        height: 50vh;
+    }
+
+    .boxOneDetalhes {
+        height: auto;
+    }
+
+    .boxTwoDetalhes {
+        padding: 20px;
+    }
+
+    .boxTwoDetalhes h1 {
+        font-size: 1.5rem;
+    }
+
+    .priceBox .preco {
+        font-size: 1.5rem;
+    }
+
+    .flexBotaoDetalhes {
+        flex-direction: column;
+    }
+
+    .flexBotaoDetalhes button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-inner img {
+        object-fit: contain;
+    }
+
+    .carousel {
+        height: 40vh;
+    }
+
+    .carrosselSlide {
+        height: 40vh;
+    }
+
+    .boxTwoDetalhes h1 {
+        font-size: 1.2rem;
+    }
+
+    .priceBox .preco {
+        font-size: 1.2rem;
+    }
+
+    .flexInputQuantidade input {
+        width: 50px;
+    }
+
+    .parcelas {
+        font-size: 1rem;
+    }
+
+    .tamanho-selector {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    
+   
+    
+}
+
+@media (max-width: 420px) {
+    .tabelaDetalhes {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .tabelaDetalhes th, 
+    .tabelaDetalhes td {
+        display: block;
+        text-align: left;
+        padding: 8px;
+        white-space: normal;
+ 
+    }
+
+    .tabelaDetalhes th {
+        background-color: transparent;
+        font-weight: normal;
+        text-align: left;
+    }
+
+    .tabelaDetalhes td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+
+    .tabelaDetalhes tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .tabelaDetalhes tr:hover {
+        background-color: transparent;
+    }
+    
+    .valorTabela{
+        background-color: #f8f8f8;
+    }
+}

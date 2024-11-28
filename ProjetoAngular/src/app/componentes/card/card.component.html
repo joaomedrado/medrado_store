@@ -1,0 +1,52 @@
+
+<section class="sectionBoxTwo">
+    <ng-container class="flexSectionBoxTwo" *ngIf="produtosListados.length > 0; else spin">
+      <div *ngFor="let produto of produtosExibir">
+        <div id="idSubSectionTwo" class="subBoxSectionTwo">
+          <img (click)="metodoListarProdutoPorId(produto.id)" [src]="metodoMelhorarQualidadeImagem(produto.thumbnail)" alt="Imagem do produto">
+          <div class="flexBodySubBoxSection">
+            <h1 (click)="metodoListarProdutoPorId(produto.id)">{{ produto.title }}</h1>
+            <div class="flexBotaoSectionTwo">
+              <button (click)="metodoListarProdutoPorId(produto.id)">Detalhes</button>
+              <div class="flexPrecos">
+                <h6 class="precoOriginal" *ngIf="produto.original_price !== null">{{ formatarPreco(produto?.original_price) }}</h6>
+                <h4 class="preco" *ngIf="produto.price !== null">{{ formatarPreco(produto.price) }}</h4>
+                <h6 *ngIf="produto?.installments?.amount !== null">
+                  em<span class="parcelas"> {{ produto?.installments?.quantity }}x {{ formatarPreco(produto?.installments?.amount) }}</span>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    
+  </section>
+  <section class="paginacao">
+    <nav aria-label="...">
+      <ul class="pagination">
+        <li (click)="mudarPagina(-1)" class="page-item" [class.disabled]="paginaAtual === 1">
+          <span class="page-link">Anterior</span>
+        </li>
+        <li id="idNumeroPaginacao" *ngFor="let numero of numerosPagina" 
+            (click)="mudarParaPagina(numero)" 
+            class="page-item" 
+            [class.active]="numero === paginaAtual">
+          <span  class="page-link">{{ numero }}</span>
+        </li>
+        <li (click)="mudarPagina(1)" class="page-item" [class.disabled]="paginaAtual >= totalPaginas">
+          <span class="page-link">Próximo</span>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  
+  <ng-template #spin>
+    <div class="spinner">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </ng-template>
+  <app-carrinho-produto></app-carrinho-produto>
+  

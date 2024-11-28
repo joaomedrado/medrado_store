@@ -1,0 +1,7 @@
+<section style="padding-top: 9.5vh;">
+    <div  *ngIf="controleAlerta"  class="alert alert-warning" role="alert">
+        <p>Usuário não está logado. Faça login para realizar a compra.</p>
+    </div>
+    <app-card [produtosListados]="produtosListados"></app-card>
+</section>
+<app-carrinho-produto></app-carrinho-produto>

@@ -1,0 +1,121 @@
+<section>
+  <div *ngIf="controleAlertCarrinho" class="alert alert-success alertCarrinho" role="alert">
+    Produto Adicionado no Carrinho
+    <button type="button" class="btn-close" (click)="fecharAlertCarrinho()" aria-label="Close"></button>
+  </div>
+  <div *ngIf="controleAlertCarrinhoCorTam" class="alert alert-warning alertCarrinho" role="alert">
+    Selecione o Tamanho e a Cor do Produto
+    <button type="button" class="btn-close" (click)="fecharAlertCarrinho()" aria-label="Close"></button>
+  </div>
+  <ng-container *ngIf="produto; else spinner">
+    <div class="flexSessaoDetalhes">
+      <article class="boxOneDetalhes">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button *ngFor="let item of produto.pictures; let i = index" type="button"
+              [attr.data-bs-target]="'#carouselExampleIndicators'" [attr.data-bs-slide-to]="i" [class.active]="i === 0"
+              [attr.aria-label]="'Slide ' + (i + 1)">
+            </button>
+          </div>
+          <div class="carousel-inner">
+            <div *ngFor="let item of produto.pictures; let i = index" class="carousel-item carrosselSlide"
+              [class.active]="i === 0">
+              <img [src]="metodoMelhorarQualidadeImagem(item.url)" class="d-block w-100" alt="Imagem do produto">
+            </div>
+          </div>
+          <div class="flexBotoesCarrossel">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon " aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="boxTwoDetalhes">
+        <h1>{{ produto.title }}</h1>
+        <h1> {{produto?.installments?.amount}} </h1>
+        <div class="flexSubBoxtwoDetalhes">
+          <div class="priceBox">
+            <div class="flexPrecos">
+              <h5 class="precoOriginal" *ngIf="produto.original_price !== null">{{
+                formatarPreco(produto?.original_price)
+                }}</h5>
+              <p class="preco" *ngIf="produto.price !== null">{{ formatarPreco(produto?.price) }}</p>
+              <p class="parcelas" *ngIf="produtoParcelas?.quantity !== null">Em {{ produtoParcelas?.quantity }}x {{
+                formatarPreco(produtoParcelas?.amount) }} </p>
+            </div>
+          </div>
+          <div class="flexInputQuantidade">
+            <label for="iqtd">Quantidade</label>
+            <input type="number" [(ngModel)]="contadorNumeroQuantidade" name="iqtd" id="iqtd" min="1" max="10" required>
+          </div>
+        </div>
+
+        <div class="product-options" *ngIf="obterCoresUnicas().length > 0" >
+          <h5>Cor</h5>
+            <div class="color-selector">
+              <div *ngFor="let color of obterCoresUnicas()">
+                <button
+                 [ngClass]="{'selected': color === corSelecionada}"
+                 (click)="selecionarCor(color)" 
+                  >
+                  {{ color }}
+                </button>
+            </div>
+          </div>
+          <div class="tamanhoProduto" *ngIf="corSelecionada">
+            <h4>Tamanho</h4>
+            <div class="tamanho-selector">
+              <div class="flexTamanhos" *ngFor="let size of obterTamanhosDisponiveis(corSelecionada)">
+                <button 
+                [ngClass]="{'selected': size === tamanhoSelecionado}"
+                 (click)="selecionarTamanho(size)"
+                 >
+                 {{ size }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="flexBotaoDetalhes">
+          <button (click)="adicionarAoCarrinho()">Comprar</button>
+          <button class="btnDescricao" (click)="metodoControleDescricao()">Descrição</button>
+        </div>
+      </article>
+    </div>
+    <ng-container *ngIf="controleDescricao;">
+      <table id="idTabelaDetalhes" class="tabelaDetalhes">
+        <thead>
+          <tr>
+            <th>Nome do Atributo</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of produtoAtributos">
+            <td class="nomeAtributoTabela">{{ item.name }}</td>
+            <td class="valorTabela">{{ item.value_name }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+  </ng-container>
+</section>
+
+<ng-template #spinner>
+  <div class="spinner">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</ng-template>
+
+<app-carrinho-produto></app-carrinho-produto>

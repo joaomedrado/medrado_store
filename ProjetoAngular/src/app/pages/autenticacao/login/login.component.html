@@ -1,0 +1,53 @@
+<section class="login">
+  <div class="flexLogin">
+    <article class="boxCadastrar">
+      <h1 class="animate__animated animate__backInDown" >Crie sua conta e <br> aproveite<span class="palavrasChamativas"> as melhores ofertas!</span></h1>
+      <a type="button" class="btn btn-outline-warning" routerLink="/cadastrar">Cadastrar</a>
+    </article>
+    <article class="boxLogin">
+      <div *ngIf="controleAlerta" class="alert alert-success" role="alert">
+        Você está logado!!!
+      </div>
+      <div *ngIf="controleAlertaSenhaUsuario" class="alert alert-danger" role="alert">
+        Usuário ou senha incorretas...
+      </div>
+      <div class="mb-3 colunm flexLogo ">
+        <h1> {{logo}} </h1>
+      </div>
+      <div class="inputs">
+        <div class="flexInputs">
+            <input [(ngModel)]="pessoa.email" id="iemail" class="form-control form-control-lg" type="email" placeholder=""
+              aria-label=".form-control-lg example"
+              placeholder="Email"
+              (keydown.Enter)="metodoLoginUsuario()"
+              >
+        </div>
+        <div class="flexInputs ">
+            <div class="input-group">
+              <input [(ngModel)]="pessoa.senha"
+                     [type]="senhaVisivel ? 'password' : 'text'"
+                     class="form-control form-control-lg inputSenha"
+                     id="inputPassword"
+                     placeholder="Senha"
+                     (keydown.Enter)="metodoLoginUsuario()"
+                     >
+        
+              <span class="input-group-text" (click)="metodoSenhaVisivel()" style="cursor: pointer;">
+                <i [class]="senhaVisivel ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+              </span>
+            </div>
+          </div>
+      </div>
+      <div class="flexBotaoLogin">
+        <button 
+        type="button" 
+        class="btn btn-warning" 
+        (click)="metodoLoginUsuario()"
+        >
+        Login
+      </button>
+      <a class="botaoCadastrarCelular" routerLink="/cadastrar">Novo na loja? Cadastrar - se</a>
+      </div>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,233 @@
+@keyframes gradientAnimation {
+    0% {
+      background-position: bottom bottom;
+    }
+    50%{
+        background-position: center top;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+.login {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.flexLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100vh;
+}
+
+.flexLogin .boxCadastrar {
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s alternate infinite;
+    width: 60vw;
+    height: 100vh;
+    background-image: url("../../../../assets/img/vista-superior-do-kit-de-carreira-modelo-natureza-morta.jpg");
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.boxCadastrar::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 54.1%;
+    height: 120%;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+
+}
+
+.flexLogin .boxLogin {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw;
+    gap: 7vh;
+}
+
+.boxLogin input {
+    width: 100%; 
+}
+
+.flexLogin .boxCadastrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    z-index: 2;
+}
+
+.boxCadastrar h1 {
+    text-align: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.2em;
+    font-size: 2.5rem;
+    z-index: 2;
+}
+
+.boxCadastrar a {
+    width: 15vw;
+    padding: 10px;
+    z-index: 2;
+}
+
+.boxCadastrar a:hover {
+    transform: translateY(-2px);
+    transition: .5s;
+}
+
+.input-group-text {
+    cursor: pointer;
+  }
+  
+  .inputSenha {
+    border-right: none; 
+    flex: 1;
+    width: 100%;
+  }
+  
+  .input-group-text {
+    background-color: white; 
+    border-left: none; 
+  }
+  
+  .input-group {
+    width: 100%; 
+  }
+  .boxLogin button,a{
+    width: 100%;
+  }
+  .botaoCadastrarCelular {
+    display: none;
+  }
+  .palavrasChamativas{
+    color: #fcd600;
+  }
+  .flexLogo{
+    display: none;
+  }
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+@media (max-width: 768px) {
+    .flexLogin .boxCadastrar{
+        display: none;
+    }
+    .login{
+        background-size: 200% 200%;
+        animation: gradientAnimation 10s alternate infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("../../../../assets/img/vista-superior-do-kit-de-carreira-modelo-natureza-morta.jpg");
+        background-position:center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+        
+    }
+    .login::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+        z-index: 1;
+    
+    }
+   
+    .flexLogin .boxLogin{
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        z-index: 1;
+    }
+    .boxLogin .flexLogo{
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        
+    }
+    .flexLogo h1{
+        font-size: 2.2rem;
+    }
+
+    .boxLogin .flexInputs{
+        width: 100%;
+    }
+ 
+   
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+       
+    }
+    .flexBotaoLogin{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+    }
+    .flexBotaoLogin button{
+        font-size: 1.2rem;
+        width: 80%;
+    }
+    .flexBotaoLogin  .botaoCadastrarCelular {
+        display: flex;
+        justify-content: center;
+        color: #c6a903;
+    }
+}
+
+
+@media (max-width: 480px) { 
+    .flexLogin {
+        padding: 10px; 
+    }
+    .flexLogin,
+    .flexLogin .boxLogin {
+        width: 100vw; 
+        height: auto; 
+    }
+   
+    .inputGroup {
+        flex-direction: column; 
+        width: 100%; 
+    }
+    
+    .flexLogo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .flexBotaoLogin{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    
+}

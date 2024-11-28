@@ -1,0 +1,11 @@
+<section style="padding-top: 20vh; height: 100vh;">
+    <div *ngFor="let usuario of usuarios">
+      <div *ngFor="let compra of usuario.compras">
+        <div *ngFor="let item of compra.itensCarrinho">
+            <img [src]="item.thumbnail" alt="">
+        </div>
+       
+      </div>
+    </div>
+  </section>
+  

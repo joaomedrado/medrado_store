@@ -1,0 +1,212 @@
+<section class="flexCarrinho" >
+    <div class="carrinho">
+        <div *ngIf="itensCarrinho.length > 0; else mensagemVazio" class="carrinho-conteudo">
+            <div class="item-carrinho">
+                <div *ngFor="let item of itensCarrinho" >
+                    <div class="card cardConteudo">
+                        <div class="flxImagemCarrinho">
+                            <img [src]="item.thumbnail" class="imagem-produto" alt="{{ item.title }}">
+                        </div>
+                        <div class="detalhes-produto">
+                            <h4>{{ item.title }}</h4>
+                            <div class="flexInformacaoProduto">
+                              <p *ngIf="item.cor !== null">Cor: {{ item.cor}}</p>
+                              <p *ngIf="item.tamanho !== null">Tamanho: {{ item.tamanho }} </p>
+                            </div>
+                            <p class="preco">{{ formatarPreco(item.price) }}</p>
+                            <p>Quantidade: {{ item.quantidade }}</p>
+                            <button type="button" class="btn btn-danger" (click)="removerItem(item.id)">Remover</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carrinho-footer card">
+                <div>
+                    <h4>Resumo da compra</h4>
+                </div>
+                <div>
+                    <p>Produto {{ formatarPreco(total) }} </p>
+                </div>
+                <div class="flexBottomPrecoCarrinho">
+                    <div class="flexTotalPrecoCarrinho">
+                        <h5>Total</h5>
+                        <h3>{{ formatarPreco(total) }}</h3>
+                    </div>
+                    <button class="btn btn-success" (click)="validarPasso0(total)">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+      
+      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Passo 1 - Informações de Endereço</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <article class="boxOneBodyModal">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Rua</span>
+                <input type="text" class="form-control" [(ngModel)]="endereco.rua" placeholder="" aria-label="rua" required
+                  aria-describedby="basic-addon1">
+              </div>
+    
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Cidade</span>
+                <input type="text" class="form-control" [(ngModel)]="endereco.cidade" placeholder="" required
+                  aria-label="cidade" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Estado</span>
+                <input type="text" class="form-control" [(ngModel)]="endereco.estado" placeholder="" required
+                  aria-label="estado" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">País</span>
+                <input type="text" class="form-control" [(ngModel)]="endereco.pais" placeholder="" aria-label="país" required
+                  aria-describedby="basic-addon1">
+              </div>
+    
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">CEP</span>
+                <input type="text" class="form-control" [(ngModel)]="endereco.cep" placeholder="00000-000" aria-label="cep" aria-describedby="basic-addon1" pattern="\d{5}-\d{3}" maxlength="9" required
+                  aria-describedby="basic-addon1">
+              </div>
+    
+              <div class="input-group">
+                <span class="input-group-text">Complemento</span>
+                <textarea class="form-control" [(ngModel)]="endereco.complemento"
+                  aria-label="With textarea"></textarea>
+              </div>
+
+              <div>
+              </div>
+    
+            </article>
+          </div>
+          <div class="modal-footer">
+            <button (click)="validarPasso1()" class="btn btn-primary" >Proximo
+              Passo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Passo 2 - Informações Pessoais</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <article class="boxTwoBodyModal">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nome</span>
+                <input type="text" class="form-control" [(ngModel)]="dadosPessoais.nome" placeholder="" required
+                  aria-label="nome" aria-describedby="basic-addon1">
+              </div>
+    
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Sobrenome</span>
+                <input type="text" class="form-control" [(ngModel)]="dadosPessoais.sobrenome" placeholder="" required
+                  aria-label="sobrenome" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">E-mail</span>
+                <input type="text" class="form-control" [(ngModel)]="dadosPessoais.email" placeholder="" required
+                  aria-label="email" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Telefone</span>
+                <input type="tel" class="form-control" [(ngModel)]="dadosPessoais.telefone"
+                  placeholder="(DDD) 0000-0000" aria-label="telefone" aria-describedby="basic-addon1">
+              </div>
+    
+    
+              <div class="input-group">
+                <span class="input-group-text">Complemento</span>
+                <textarea class="form-control" [(ngModel)]="endereco.complemento"
+                  aria-label="With textarea"></textarea>
+              </div>
+    
+            </article>
+          </div>
+          <div class="modal-footer">
+            <button (click)="validarPasso2()" class="btn btn-primary" >Proximo
+              Passo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">Passo 3 - Informações de Pagamento</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div *ngIf="controleAlert">
+                <div class="alert alert-success alertaCompra" role="alert">
+                  Produto comprado com sucesso
+                  <button type="button" class="btn-close" (click)="fecharAlert()" aria-label="Close"></button>
+                </div>
+            </div>  
+            <article class="boxTwoBodyModal">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nome no Cartão</span>
+                <input type="number" class="form-control" [(ngModel)]="dadosCartao.nomeCartao"
+                  placeholder="Nome impresso no cartão" aria-label="nomeCartao" aria-describedby="basic-addon1" 
+                  required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Número do Cartão</span>
+                <input type="number" class="form-control" [(ngModel)]="dadosCartao.numeroCartao"
+                  placeholder="0000 0000 0000 0000" aria-label="numeroCartao" aria-describedby="basic-addon1" 
+                  maxlength="19" pattern="\d*" required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Validade</span>
+                <input type="date" class="form-control" [(ngModel)]="dadosCartao.validade" placeholder="MM/AA" 
+                  aria-label="validade" aria-describedby="basic-addon1" maxlength="5"
+                  pattern="(?:0[1-9]|1[0-2])/[0-9]{2}" required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">CVV</span>
+                <input type="number" class="form-control" [(ngModel)]="dadosCartao.cvv" placeholder="000"
+                  aria-label="cvv" aria-describedby="basic-addon1" maxlength="3" pattern="\d*" required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">CPF</span>
+                <input type="number" class="form-control" [(ngModel)]="dadosCartao.cpf" placeholder="000.000.000-00"
+                  aria-label="cpf" aria-describedby="basic-addon1" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+              </div>
+    
+            </article>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" (click)="metodoComprarProdutoDetalhes()">Realizar Compra</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</section>
+
+<ng-template #mensagemVazio>
+    <section class="mensagemVazio">
+        <div class="flexTextoMensagemVazio">
+            <h1>Ainda não consiste produto :(</h1>
+            <h5>Confira as melhores promoções em nossa loja!!</h5>
+        </div>
+        <a type="button" class="btn btn-warning" routerLink="/user/listarProdutos">Descubra</a>
+    </section>
+    
+</ng-template>

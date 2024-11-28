@@ -1,0 +1,220 @@
+/* Estilo padrão para telas maiores */
+.flexCarrinho {
+    padding-top: 15vh;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.carrinho {
+    height: auto;
+    padding: 5vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.carrinho-conteudo {
+    display: flex;
+    justify-content: space-around;
+    gap: 6vw;
+    flex: 1;
+}
+
+.item-carrinho {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.cardConteudo {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    padding: 2vh;
+}
+
+.cardConteudo .flxImagemCarrinho img {
+    height: 20vh;
+}
+
+.carrinho-footer {
+    padding: 1.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    top: 20vh;
+    right: 0;
+    width: 22vw;
+    background-color: white;
+    border-left: 1px solid #ccc;
+    z-index: 10;
+    height: auto;
+    overflow-y: auto;
+}
+
+.flexTotalPrecoCarrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexBottomPrecoCarrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.mensagemVazio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    height: 60vh;
+}
+
+.flexTextoMensagemVazio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexTextoMensagemVazio h1 {
+    font-size: 3.5rem;
+}
+
+.mensagemVazio a {
+    width: 10vw;
+    padding: 1.5vh;
+}
+
+.flexInformacaoProduto {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1vw;
+}
+
+.flexTextoMensagemVazio h5 {
+
+    text-align: center;
+}
+@media (max-width: 1024px) {
+    .carrinho-conteudo {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+
+    .cardConteudo {
+        width: 80vw;
+        padding: 1.5vh;
+    }
+
+    .cardConteudo .flxImagemCarrinho img {
+        height: 15vh;
+    }
+
+    .carrinho-footer {
+        width: 30vw;
+        position: relative;
+        top: 0;
+        margin-top: 2vh;
+    }
+
+    .mensagemVazio a {
+        width: 20vw;
+    }
+
+    .flexTextoMensagemVazio h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .flexTextoMensagemVazio h5 {
+
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .flexCarrinho {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardConteudo {
+        width: 90vw;
+        padding: 1vh;
+        flex-direction: column;
+    }
+
+    .cardConteudo .flxImagemCarrinho img {
+        height: 12vh;
+    }
+
+    .carrinho-footer {
+        width: 90vw;
+        position: relative;
+        margin-top: 5vh;
+        border-left: none;
+    }
+
+    .flexTotalPrecoCarrinho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mensagemVazio a {
+        width: 30vw;
+    }
+
+    .flexTextoMensagemVazio h1 {
+        font-size: 2rem;
+    }
+    .flexTextoMensagemVazio h5 {
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .cardConteudo {
+        width: 100%;
+        padding: 0.5vh;
+        flex-direction: column;
+    }
+
+    .cardConteudo .flxImagemCarrinho img {
+        height: 10vh;
+    }
+
+    .carrinho-footer {
+        width: 100%;
+        position: relative;
+        margin-top: 5vh;
+        border-left: none;
+    }
+
+    .flexTextoMensagemVazio h1 {
+        font-size: 1.5rem;
+        
+    }
+    .flexTextoMensagemVazio h5 {
+
+        text-align: center;
+    }
+
+    .mensagemVazio a {
+        width: 50vw;
+    }
+
+    .flexBottomPrecoCarrinho {
+        align-items: center;
+    }
+    
+}
+

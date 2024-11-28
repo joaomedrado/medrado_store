@@ -1,0 +1,148 @@
+.formCadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.alert {
+  width: 50%;
+}
+
+.container {
+  max-width: 60vw;
+  margin: auto;
+  padding: 20px;
+}
+
+.flexInputEnderecoOne {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.botaoCadastrar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #16cb16;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.botaoCadastrar:hover {
+  background-color: #14ad14;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: black;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.flexSenha {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexInputsSenha {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5vw;
+  width: 100%;
+}
+
+.flexInputsSenha input {
+  width: 28vw;
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .container {
+      max-width: 80vw; 
+  }
+  .flexInputEnderecoOne {
+      grid-template-columns: 1fr; 
+  }
+  .flexInputsSenha input {
+      width: 40vw; 
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      max-width: 90vw;
+  }
+  .flexInputEnderecoOne {
+      grid-template-columns: 1fr;
+  }
+  .flexInputsSenha input {
+      width: 80vw; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .alert {
+      width: 90%; 
+  }
+  .container {
+      max-width: 100vw;
+      padding: 10px;
+  }
+  .flexInputEnderecoOne {
+      grid-template-columns: 1fr;
+  }
+  .flexInputsSenha input {
+      width: 100%; 
+  }
+  .botaoCadastrar,
+  button {
+      width: 100%; 
+      margin-bottom: 10px; 
+  }
+}

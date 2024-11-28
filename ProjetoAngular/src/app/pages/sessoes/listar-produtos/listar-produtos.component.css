@@ -1,0 +1,125 @@
+.sectionBoxTwo {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    padding: 1vw;
+    padding-top: 15vh;
+}
+
+.subBoxSectionTwo {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    transition: transform 0.3s ease;
+    height: 99%;
+}
+
+.subBoxSectionTwo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.subBoxSectionTwo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.subBoxSectionTwo h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.subBoxSectionTwo .preco {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 500;
+}
+.precoOriginal{
+    color: rgb(131, 129, 129);
+    font-weight: bold;
+    text-decoration: line-through;
+    font-size: .9rem;
+}
+.parcelas{
+    color: #bfa201;
+}
+.flexBotaoSectionTwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.flexBotaoSectionTwo button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.flexBotaoSectionTwo button:first-child {
+    background-color: black;
+    color: white;
+}
+
+.flexBotaoSectionTwo button.comprar {
+    background-color: #ffdb15;
+    color: #333;
+}
+
+.flexBotaoSectionTwo button:hover {
+    opacity: 0.9;
+}
+.flexPrecos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.flexSectionBoxTwo{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 50vh;
+}
+.paginacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw;
+}
+.page-link{
+    color: black;
+}
+.pagination .page-item.active .page-link {
+    background-color: #ffdb15; 
+    border-color: #ffdb15;   
+    color: black;              
+  }
+  
+  .pagination .page-item .page-link {
+    color: black; 
+  }
+  
+  .pagination .page-item .page-link:hover {
+    background-color: black; 
+    color: white;
+  }
+  .pagination .page-item{
+    cursor: pointer;
+  }
+  

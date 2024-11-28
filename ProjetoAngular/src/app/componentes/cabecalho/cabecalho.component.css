@@ -1,0 +1,79 @@
+nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+}
+
+.link {
+    font-size: 1rem;
+    color: #fff; 
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #ffdb15;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+li {
+    cursor: pointer;
+}
+
+.flexSessaoTwoCabecalho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    width: 33vw;
+}
+
+.flexSessaoTwoCabecalho .imagemPerfil {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0;
+}
+
+
+.flexCarrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexCarrinho svg {
+    color: #ffdb15;
+}
+
+.search-container {
+    display: flex;
+}
+
+.search-input {
+    width: 0; 
+    opacity: 0; 
+    transition: width 0.4s ease, opacity 0.4s ease;
+}
+
+.search-container button{
+    border: none;
+    color: #ffdb15;
+}
+.search-container button:hover{
+    border: none;
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .flexSessaoTwoCabecalho {
+        align-items: center; 
+    }
+    .search-input {
+        width: 100%; 
+    }
+}
